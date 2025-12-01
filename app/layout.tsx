@@ -2,22 +2,21 @@ import type { Metadata } from "next";
 import { Playfair_Display, Montserrat } from "next/font/google";
 import "./globals.css";
 
-// On charge les polices avec les graisses élégantes (Light, Regular, Bold)
 const playfair = Playfair_Display({ 
   subsets: ["latin"], 
   variable: "--font-playfair",
-  display: 'swap',
+  display: "swap",
 });
 
 const montserrat = Montserrat({ 
   subsets: ["latin"], 
   variable: "--font-montserrat",
-  display: 'swap',
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "LFDST | Production Audiovisuelle",
-  description: "Les Films Dans Sa Tête - Association de production",
+  title: "Les Films Dans Sa Tête",
+  description: "Association de production audiovisuelle",
 };
 
 export default function RootLayout({
@@ -26,8 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
-      {/* On applique la police Montserrat par défaut et le fond NOIR (bg-black) */}
+    <html lang="fr" className="scroll-smooth">
       <body className={`${playfair.variable} ${montserrat.variable} bg-black text-white antialiased`}>
         {children}
       </body>
