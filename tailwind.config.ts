@@ -9,21 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#050505",
-        surface: "#121212",
-        gold: {
-          DEFAULT: "#D4AF37",
-          muted: "#C5A028",
-          light: "#F1D06E",
-        },
-        text: {
-          main: "#F5F5F5",
-          muted: "#A3A3A3",
-        }
+        bg: "#050505",    // Ton noir spécifique
+        gold: "#D4AF37",  // Ton doré spécifique
       },
       fontFamily: {
-        serif: ['var(--font-playfair)'],
-        sans: ['var(--font-montserrat)'],
+        serif: ['var(--font-playfair)', 'serif'],
+        sans: ['var(--font-montserrat)', 'sans-serif'],
       },
       backgroundImage: {
         'grain': "url('https://upload.wikimedia.org/wikipedia/commons/7/76/Noise.png')",
