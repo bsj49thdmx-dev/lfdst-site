@@ -2,21 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-/* On force le noir profond et on retire les marges par défaut */
 :root {
-  background-color: #050505;
-  color: #F5F5F5;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 body {
-  background-color: #050505; /* Noir LFDST */
+  background-color: #000000;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Empêche le scroll horizontal qui casse l'interface */
+  overflow-x: hidden;
 }
 
-/* Scrollbar invisible pour le style */
+/* FORCE LES BOUTONS À ÊTRE TRANSPARENTS PAR DÉFAUT */
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+/* ENLÈVE LA BARRE DE SCROLL */
 ::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
+  display: none;
 }
